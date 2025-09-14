@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogNova</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header-blog">
+        <div class="logo">
+            <h1>BlogNova</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Buscar..." />
+            <button type="submit" class="search-btn">🔍</button>
+        </div>
+    </header>
+    <main class="layout">
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <div class="profile-picture">
+                    <img src="images/anime-girls-.jpg" alt="Foto de perfil" />
+                </div>
+                <div class="profile-info">
+                    <h3>G, Programador</h3>
+                    <p>Creador de BlogNova</p>
+                </div>
+            </div>
+            <nav class="profile-menu">
+                <a href="#" class="profile-menu-item" data-section="inicio">🏠 Inicio</a>
+                <a href="#" class="profile-menu-item" data-section="publicaciones">✏️ Publicaciones</a>
+                <a href="#" class="profile-menu-item" data-section="destacados">🌟 Destacados</a>
+                <a href="#" class="profile-menu-item" data-section="categorias">🗂️ Categorías</a>
+                <a href="#" class="profile-menu-item" data-section="acerca">👤 Acerca de</a>
+                <a href="#" class="profile-menu-item" data-section="muro">💬 Muro</a>
+                <a href="#" class="profile-menu-item" data-section="photos">📸 Photos</a>
+                <a href="#" class="profile-menu-item" data-section="boxes">📦 Boxes</a>
+            </nav>
+            <div class="friends-section">
+                <h4>X Amigos</h4>
+                <div class="friends-grid">
+                    <a href="#" class="friend-avatar"><img src="images/Chainsaw-Man-Kobeni-Chainsaw-.jpg" alt="Amigo 1" /></a>
+                    <a href="#" class="friend-avatar"><img src="images/anime-girls-anime-Neon-Genesis-.jpg" alt="Amigo 2" /></a>
+                    <a href="#" class="friend-avatar"><img src="images/Chainsaw-Man-Reze-Chainsaw.jpg" alt="Amigo 3" /></a>
+                    <a href="#" class="view-all-friends">Ver todo</a>
+                </div>
+            </div>
+        </aside>
+        <section id="inicio" class="view">
+            <div class="main-content">
+                <h2 class="section-title">Últimas entradas</h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <img src="images/portada 2.png" alt="Imagen de la publicación 1" class="post-image" />
+                        <div class="post-content">
+                            <h3>Zona Cero: Gritos Silenciosos</h3>
+                            <p>Mundo post-apocalíptico</p>
+                            <a href="#" class="read-more">Leer más →</a>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="images/Hilda.jpg" alt="Imagen de la publicación 2" class="post-image" />
+                        <div class="post-content">
+                            <h3>EL Mundo De Hilda</h3>
+                            <p>Un adelanto con un toque personal...</p>
+                            <a href="#" class="read-more">Leer más →</a>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="images/Knight-Dungeon.jpg" alt="Imagen de la publicación 3" class="post-image" />
+                        <div class="post-content">
+                            <h3>Explorando la creatividad</h3>
+                            <p>Consejos y trucos para inspirarte...</p>
+                            <a href="#" class="read-more">Leer más →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="publicaciones" class="view" style="display: none;">
+            <div class="main-content">
+                <h2>Todas las publicaciones</h2>
+                <p class="intro">Aquí puedes encontrar una colección completa de todas nuestras entradas.</p>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <img src="images/portada 2.png" alt="Imagen de la publicación 1" class="post-image" />
+                        <div class="post-content">
+                            <h3>Zona Cero: Gritos Silenciosos</h3>
+                            <p>Un mundo post-apocalíptico lleno de misterios y peligros.</p>
+                            <a href="#" class="read-more">Leer más →</a>
+                            <div class="comment-section">
+                                <button class="toggle-comments">Mostrar Comentarios</button>
+                                <div class="comments-container" style="display: none;">
+                                    <h4>Comentarios (2)</h4>
+                                    <div class="comment">
+                                        <p>¡Increíble historia! Me atrapó desde el principio.</p>
+                                        <small>— Lector Anónimo</small>
+                                    </div>
+                                    <div class="comment">
+                                        <p>Me encanta el toque post-apocalíptico. Sigue así, ¡gran trabajo!</p>
+                                        <small>— Fan #1</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="images/Hilda.jpg" alt="Imagen de la publicación 2" class="post-image" />
+                        <div class="post-content">
+                            <h3>EL Mundo De Hilda</h3>
+                            <p>Adéntrate en una aventura mágica con los personajes de la serie.</p>
+                            <a href="#" class="read-more">Leer más →</a>
+                            <div class="comment-section">
+                                <button class="toggle-comments">Mostrar Comentarios</button>
+                                <div class="comments-container" style="display: none;">
+                                    <h4>Comentarios (1)</h4>
+                                    <div class="comment">
+                                        <p>Siempre me ha gustado el universo de Hilda. ¡Qué buena recomendación!</p>
+                                        <small>— Sofía</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="images/Knight-Dungeon.jpg" alt="Imagen de la publicación 3" class="post-image" />
+                        <div class="post-content">
+                            <h3>Explorando la creatividad</h3>
+                            <p>Consejos y trucos para inspirarte y dar vida a tus ideas.</p>
+                            <a href="#" class="read-more">Leer más →</a>
+                            <div class="comment-section">
+                                <button class="toggle-comments">Mostrar Comentarios</button>
+                                <div class="comments-container" style="display: none;">
+                                    <h4>Comentarios (0)</h4>
+                                    <div class="comment">
+                                        <p>Sé el primero en comentar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="destacados" class="view" style="display: none;">
+            <div class="main-content">
+                <div class="highlight-layout">
+                    <h2>Publicaciones destacadas</h2>
+                    <p class="intro">Descubre las entradas más populares y mejor valoradas por la comunidad.</p>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <img src="images/portada 2.png" alt="Imagen de la publicación 1" class="post-image" />
+                            <div class="post-content">
+                                <h3>⭐ Zona Cero: Gritos Silenciosos</h3>
+                                <p>¡La entrada más popular! No te pierdas esta historia.</p>
+                                <a href="#" class="read-more">Leer más →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categorias" class="view" style="display: none;">
+            <div class="main-content">
+                <div class="categories-layout">
+                    <div class="categories-image-box">
+                    </div>
+                    <div class="categories-content">
+                        <h2>Categorías</h2>
+                        <p class="intro">Explora las entradas según la temática que más te interese.</p>
+                        <div class="categories-grid">
+                            <a href="#" class="category-card" data-category="diseño">
+                                <div class="category-icon">🎨</div>
+                                <h3>Fantasía</h3>
+                                <p>Mundos mágicos llenos de aventuras y criaturas asombrosas.</p>
+                            </a>
+                            <a href="#" class="category-card" data-category="tecnologia">
+                                <div class="category-icon">💻</div>
+                                <h3>Tecnología</h3>
+                                <p>Noticias, tutoriales y análisis de hardware y software.</p>
+                            </a>
+                            <a href="#" class="category-card" data-category="creatividad">
+                                <div class="category-icon">💡</div>
+                                <h3>Creatividad</h3>
+                                <p>Ejercicios y herramientas para dar rienda suelta a tu ingenio.</p>
+                            </a>
+                            <a href="#" class="category-card" data-category="horror">
+                                <div class="category-icon">🕯️</div>
+                                <h3>Horror</h3>
+                                <p>Relatos, reviews y arte gráfico para amantes del terror.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="acerca" class="view" style="display: none;">
+            <div class="main-content">
+                <div class="about-hero">
+                    <h2>Quién soy</h2>
+                </div>
+                <div class="about-content">
+                    <div class="profile-card">
+                        <img src="images/iron-giant-cartoon-.jpg" alt="Foto de perfil del Gigante de Hierro" class="profile-pic" />
+                        <h3>G, Programador de confianza</h3>
+                        <p class="tagline">"Si funciona, no lo toques... a menos que sea para mejorarlo."</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter">🐦</a>
+                            <a href="#" aria-label="LinkedIn">🔗</a>
+                            <a href="#" aria-label="GitHub">🐙</a>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Mi Historia</h3>
+                        <p>
+                            ¿Por qué la programación? Quien sabe, tal vez porque aquí tengo el control total, o porque me gusta crear mundos nuevos. Desde pequeño me ha fascinado la tecnología y la creatividad. Comencé mi viaje en el mundo digital explorando diferentes lenguajes de programación y herramientas de diseño.
+                        </p>
+                        <h3>Habilidades Clave</h3>
+                        <div class="skills">
+                            <span class="skill">Jugador de WOW</span>
+                            <span class="skill">Tengo un técnico en arquitectura</span>
+                            <span class="skill">Sé usar JavaScript</span>
+                            <span class="skill">Me gusta el steampunk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="view" style="display: none;">
+            <div class="main-content">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna pregunta, sugerencia o simplemente quieres saludar? ¡Estoy a tu disposición!</p>
+                <div class="contact-container">
+                    <form class="contact-form">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required />
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required />
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit" class="read-more">Enviar Mensaje →</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>Información de contacto</h3>
+                        <p><strong>Correo:</strong> contacto@blognova.com</p>
+                        <p><strong>Redes Sociales:</strong></p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter">🐦</a>
+                            <a href="#" aria-label="LinkedIn">🔗</a>
+                            <a href="#" aria-label="GitHub">🐙</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="muro" class="view" style="display: none;">
+            <div class="main-content">
+                <h2>Tu Muro</h2>
+                <p class="intro">
+                    Aquí puedes compartir tus pensamientos. ¡Sé la voz de la comunidad!
+                </p>
+                <div class="muro-container">
+                    <div class="muro-post-creator">
+                        <h3>Crea una publicación</h3>
+                        <textarea id="post-input" placeholder="¿Qué tienes en mente?"></textarea>
+                        <button id="post-btn" class="read-more">Publicar →</button>
+                    </div>
+                    <div id="posts-container" class="muro-posts-grid">
+                        <article class="muro-post-card">
+                            <div class="muro-post-header">
+                                <span class="muro-post-author">Usuario Anónimo</span>
+                                <span class="muro-post-date">Hace un momento</span>
+                            </div>
+                            <p class="muro-post-content">
+                                ¡Hola, mundo! ¡Este muro es genial! Estoy probando cómo se ve una publicación.
+                            </p>
+                        </article>
+                        <article class="muro-post-card">
+                            <div class="muro-post-header">
+                                <span class="muro-post-author">G, Programador</span>
+                                <span class="muro-post-date">Hace 3 minutos</span>
+                            </div>
+                            <p class="muro-post-content">
+                                ¡Qué alegría ver que mi código está cobrando vida! ¡Gracias por ser tan creativo!
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="photos" class="view" style="display: none;">
+            <div class="main-content">
+                <h2>Mi Galería de Fotos</h2>
+                <p class="intro">Una colección de imágenes inspiradoras que me encantan.</p>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <img src="images\baldur.jpg"class="post-image" />
+                        <div class="post-content">
+                            <h3>Luz y sombra</h3>
+                            <p>Una foto que transmite tranquilidad.</p>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="images\capital.jpg" class="post-image" />
+                        <div class="post-content">
+                            <h3>Explorando el cosmos</h3>
+                            <p>Una imagen abstracta para inspirar.</p>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="images\medieval.jpg" class="post-image" />
+                        <div class="post-content">
+                            <h3>Mirando al horizonte</h3>
+                            <p>Explorando nuevos mundos visuales.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="boxes" class="view" style="display: none;">
+            <div class="main-content">
+                <h2>Boxes y Widgets</h2>
+                <p class="intro">Una sección de elementos modulares que puedes usar en tu sitio.</p>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-content">
+                            <h3>Widget de Perfil</h3>
+                            <p>Este es un ejemplo de un widget de perfil simple.</p>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <div class="post-content">
+                            <h3>Widget de Notificaciones</h3>
+                            <p>Este box podría mostrar notificaciones recientes.</p>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <div class="post-content">
+                            <h3>Widget de Estadísticas</h3>
+                            <p>Un widget para ver las estadísticas del sitio.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-blog">
+        <p>© 2025 BlogNova · Diseñado con cariño y toques únicos</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

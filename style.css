@@ -1,0 +1,385 @@
+/*--------------------------------------------------
+  1. IMPORTAR TIPOGRAFÍAS
+--------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+/*--------------------------------------------------
+  2. VARIABLES
+--------------------------------------------------*/
+:root {
+  --clr-bg: #2b2b2b;
+  --clr-card-bg: #3a3a3a;
+  --clr-text: #e0e0e0;
+  --clr-primary: #9ca3af;
+  --clr-secondary: #4b5563;
+  --clr-accent: #6ee3b6;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --spacing: 1.5rem;
+  --spacing-sm: 1rem;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Lora', serif;
+}
+
+/*--------------------------------------------------
+  3. ESTILOS GENERALES
+--------------------------------------------------*/
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  color: var(--clr-text);
+  line-height: 1.6;
+  background: linear-gradient(to bottom right, #da88cf, #7c3c5fee);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main.layout {
+  display: flex;
+  gap: var(--spacing);
+  max-width: 1200px;
+  margin: var(--spacing) auto;
+  padding: 0 var(--spacing);
+}
+
+.view.hidden { display: none; }
+
+/* Tarjetas base */
+.post-card,
+.category-card,
+.muro-post-card {
+  background: var(--clr-card-bg);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover,
+.category-card:hover,
+.muro-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(40deg, var(--clr-primary), #8291a0);
+  color: var(--clr-bg);
+  border-radius: var(--radius);
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.read-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+/*--------------------------------------------------
+  4. HEADER Y NAVEGACIÓN
+--------------------------------------------------*/
+.header-blog {
+  background: linear-gradient(135deg, var(--clr-secondary), #2e2a42);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+}
+
+.header-blog .logo h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin: 0;
+}
+
+.nav-blog a {
+  font-family: var(--font-heading);
+  color: var(--clr-text);
+  text-decoration: none;
+  margin-left: var(--spacing);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-blog a:hover { color: var(--clr-primary); }
+
+.nav-blog a.btn-muro {
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+.nav-blog a.btn-muro:hover {
+  background: #b0b8c0;
+  transform: translateY(-2px);
+}
+
+/* Barra de búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: var(--spacing);
+}
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--clr-secondary);
+  border-radius: var(--radius);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--font-body);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 5px rgba(156,163,175,0.5);
+}
+.search-btn {
+  padding: 0.5rem;
+  border: none;
+  margin-left: -10px;
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.search-btn:hover { background: #b0b8c0; }
+
+/*--------------------------------------------------
+  5. FOOTER
+--------------------------------------------------*/
+.footer-blog {
+  text-align: center;
+  padding: var(--spacing);
+  font-size: 0.9rem;
+  background: var(--clr-secondary);
+  color: var(--clr-text);
+}
+
+/*--------------------------------------------------
+  6. SECCIÓN HOME
+--------------------------------------------------*/
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 var(--spacing);
+}
+
+/* Sidebar */
+.profile-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: var(--clr-card-bg);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
+  overflow-y: auto;
+}
+.profile-card {
+  text-align: center;
+  padding-bottom: var(--spacing);
+  border-bottom: 1px solid var(--clr-secondary);
+}
+.profile-picture {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+  border: 3px solid var(--clr-primary);
+  overflow: hidden;
+}
+.profile-picture img { width: 100%; height: 100%; object-fit: cover; }
+.profile-info h3 {
+  font-family: var(--font-heading);
+  color: var(--clr-primary);
+  margin-bottom: 0.25rem;
+}
+.profile-info p { font-size: 0.9rem; }
+
+/* Menú */
+.profile-menu {
+  margin-top: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-menu-item {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.profile-menu-item:hover {
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+}
+
+/* Amigos */
+.friends-section { margin-top: var(--spacing); }
+.friends-section h4 {
+  font-family: var(--font-heading);
+  color: var(--clr-secondary);
+  margin-bottom: 1rem;
+}
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.friend-avatar {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-primary);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.friend-avatar:hover { transform: scale(1.1); }
+.friend-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Contenido principal */
+.main-content {
+  flex-grow: 1;
+  background: var(--clr-card-bg);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.main-content .section-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--clr-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: var(--spacing);
+  justify-items: center;
+}
+.post-card {
+  max-width: 300px;
+  overflow: hidden;
+}
+.post-image {
+  width: 100%; height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.post-content {
+  padding: var(--spacing-sm);
+  text-align: center;
+}
+.post-content h3 {
+  font-family: var(--font-heading);
+  color: var(--clr-primary);
+  margin-bottom: 0.5rem;
+}
+.post-content p { color: var(--clr-secondary); }
+
+/*--------------------------------------------------
+  7. CATEGORÍAS
+--------------------------------------------------*/
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing);
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: var(--spacing-sm);
+  background: var(--clr-card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.category-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+/*--------------------------------------------------
+  8. ACERCA DE
+--------------------------------------------------*/
+.about-content img {
+  max-width: 280px;
+  max-height: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------
+  9. MURO (PUBLICAR)
+--------------------------------------------------*/
+.muro-publicar {
+  background: var(--clr-card-bg);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  max-width: 700px;
+  width: 100%;
+}
+
+.muro-publicar textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid var(--clr-secondary);
+  border-radius: var(--radius-sm);
+  resize: none;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+.muro-publicar button {
+  margin-top: 10px;
+  float: right;
+  padding: 8px 16px;
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.muro-publicar button:hover {
+  background: #b0b8c0;
+}
+
+/*--------------------------------------------------
+  15. RESPONSIVE
+--------------------------------------------------*/
+@media (max-width: 900px) {
+  .main-grid-container { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 768px) {
+  main.layout { grid-template-columns: 1fr; }
+  .nav-blog { display: none; }
+  .categories-layout { display: block; }
+  .categories-image-box { min-height: 250px; margin-bottom: var(--spacing); }
+  .about-content { display: block; }
+}
